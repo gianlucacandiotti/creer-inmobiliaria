@@ -1,11 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import Features from '../components/Features'
-import Testimonials from '../components/Testimonials'
-import Pricing from '../components/Pricing'
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import React from "react"
+import PropTypes from "prop-types"
+import { graphql } from "gatsby"
+
+import Layout from "../components/Layout"
+import Features from "../components/Features"
+import Testimonials from "../components/Testimonials"
+import Pricing from "../components/Pricing"
+import PreviewCompatibleImage from "../components/PreviewCompatibleImage"
 
 export const ProductPageTemplate = ({
   image,
@@ -23,17 +24,17 @@ export const ProductPageTemplate = ({
       className="full-width-image-container margin-top-0"
       style={{
         backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+          image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
       }}
     >
       <h2
         className="has-text-weight-bold is-size-1"
         style={{
-          boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
-          backgroundColor: '#f40',
-          color: 'white',
-          padding: '1rem',
+          boxShadow: "0.5rem 0 0 #f40, -0.5rem 0 0 #f40",
+          backgroundColor: "#f40",
+          color: "white",
+          padding: "1rem",
         }}
       >
         {title}

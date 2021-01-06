@@ -1,15 +1,17 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { BlogPostTemplate } from '../../templates/blog-post'
+import React from "react"
+import PropTypes from "prop-types"
 
-const BlogPostPreview = ({ entry, widgetFor }) => {
-  const tags = entry.getIn(['data', 'tags'])
+import { BlogPostTemplate } from "../../templates/blog-post"
+
+export const BlogPostPreview = ({ entry, widgetFor }) => {
+  const tags = entry.getIn(["data", "tags"])
+
   return (
     <BlogPostTemplate
-      content={widgetFor('body')}
-      description={entry.getIn(['data', 'description'])}
+      content={widgetFor("body")}
+      description={entry.getIn(["data", "description"])}
       tags={tags && tags.toJS()}
-      title={entry.getIn(['data', 'title'])}
+      title={entry.getIn(["data", "title"])}
     />
   )
 }
@@ -20,5 +22,3 @@ BlogPostPreview.propTypes = {
   }),
   widgetFor: PropTypes.func,
 }
-
-export default BlogPostPreview
