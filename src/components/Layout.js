@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
   return (
     <div className="font-sans">
       <Helmet>
-        <html lang="en" />
+        <html lang="es" />
 
         <title>{title}</title>
 

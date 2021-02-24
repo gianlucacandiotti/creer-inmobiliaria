@@ -1,83 +1,48 @@
 import React from "react"
-import { Link } from "gatsby"
+import { FaBars } from "@react-icons/all-files/fa/FaBars"
+import { FaTimes } from "@react-icons/all-files/fa/FaTimes"
+import cx from "classnames"
+// import { Link } from "gatsby"
 
-import github from "../img/github-icon.svg"
-import logo from "../img/logo.svg"
+import logo from "@/img/logo.png"
 
 const Navbar = () => {
   const [active, setActive] = React.useState(false)
-  const [navBarActiveClass, setNavBarActiveClass] = React.useState("")
 
   const toggleHamburger = () => {
     setActive(!active)
   }
 
-  React.useEffect(() => {
-    if (active) {
-      setNavBarActiveClass("is-active")
-    } else {
-      setNavBarActiveClass("")
-    }
-  }, [active])
-
   return (
-    <nav
-      className="navbar is-transparent"
-      role="navigation"
-      aria-label="main-navigation"
-    >
-      <div className="container">
-        <div className="navbar-brand">
-          <Link to="/" className="navbar-item" title="Logo">
-            <img src={logo} alt="Kaldi" style={{ width: "88px" }} />
-          </Link>
+    <header className="bg-gray-100 sm:flex sm:justify-between sm:px-4 sm:py-2">
+      <div className="flex items-center justify-between px-4 py-2 sm:px-0 sm:p-0">
+        <img src={logo} alt="Creer Inmobiliaria" className="h-20" />
 
-          <button
-            type="button"
-            className={`navbar-burger burger ${navBarActiveClass}`}
-            data-target="navMenu"
-            onClick={() => {
-              toggleHamburger()
-            }}
-          >
-            <span />
-            <span />
-            <span />
-          </button>
-        </div>
-        <div id="navMenu" className={`navbar-menu ${navBarActiveClass}`}>
-          <div className="navbar-start has-text-centered">
-            <Link className="navbar-item" to="/about">
-              About
-            </Link>
-            <Link className="navbar-item" to="/products">
-              Products
-            </Link>
-            <Link className="navbar-item" to="/blog">
-              Blog
-            </Link>
-            <Link className="navbar-item" to="/contact">
-              Contact
-            </Link>
-            <Link className="navbar-item" to="/contact/examples">
-              Form Examples
-            </Link>
-          </div>
-          <div className="navbar-end has-text-centered">
-            <a
-              className="navbar-item"
-              href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span className="icon">
-                <img src={github} alt="Github" />
-              </span>
-            </a>
-          </div>
-        </div>
+        <button
+          type="button"
+          className="block text-gray-800 hover:text-pink-600 focus:text-pink-600 focus:outline-none sm:hidden"
+          onClick={toggleHamburger}
+        >
+          {!active ? (
+            <FaBars className="h-8 w-8 fill-current" />
+          ) : (
+            <FaTimes className="h-8 w-8 fill-current" />
+          )}
+        </button>
       </div>
-    </nav>
+
+      <div className={cx({ hidden: !active }, "sm:flex")}>
+        <a className="block text-pink-600 font-semibold hover:bg-white p-4 sm:flex sm:items-center sm:p-2 sm:hover:bg-transparent sm:text-blue-900 sm:border-b-2 sm:border-transparent sm:hover:border-pink-600">
+          Propiedades
+        </a>
+        <a className="block text-pink-600 font-semibold hover:bg-white p-4 sm:mt-0 sm:flex sm:items-center sm:p-2 sm:hover:bg-transparent sm:text-blue-900 sm:border-b-2 sm:border-transparent sm:hover:border-pink-600">
+          Trabaja con nosotros
+        </a>
+        <a className="block text-pink-600 font-semibold hover:bg-white p-4 sm:mt-0 sm:flex sm:items-center sm:p-2 sm:hover:bg-transparent sm:text-blue-900 sm:border-b-2 sm:border-transparent sm:hover:border-pink-600">
+          Contacto
+        </a>
+      </div>
+    </header>
   )
 }
 

@@ -1,12 +1,13 @@
-const path = require("path");
-const get = require("lodash/get");
-const uniq = require("lodash/uniq");
-const kebabCase = require("lodash/kebabCase");
-const { createFilePath } = require("gatsby-source-filesystem");
-const { fmImagesToRelative } = require("gatsby-remark-relative-images");
+const path = require("path")
+
+const get = require("lodash/get")
+const uniq = require("lodash/uniq")
+const kebabCase = require("lodash/kebabCase")
+const { createFilePath } = require("gatsby-source-filesystem")
+const { fmImagesToRelative } = require("gatsby-remark-relative-images")
 
 exports.createPages = async ({ actions, graphql }) => {
-  const { createPage } = actions;
+  const { createPage } = actions
 
   const result = await graphql(`
     {
@@ -25,17 +26,17 @@ exports.createPages = async ({ actions, graphql }) => {
         }
       }
     }
-  `);
+  `)
 
   if (result.errors) {
-    result.errors.forEach((e) => console.error(e.toString()));
-    return Promise.reject(result.errors);
+    result.errors.forEach(e => console.error(e.toString()))
+    return Promise.reject(result.errors)
   }
 
-  const posts = result.data.allMarkdownRemark.edges;
+  const posts = result.data.allMarkdownRemark.edges
 
-  posts.forEach((edge) => {
-    const id = edge.node.id;
+  posts.forEach(edge => {
+    const id = edge.node.id
 
     createPage({
       path: edge.node.fields.slug,
@@ -47,23 +48,23 @@ exports.createPages = async ({ actions, graphql }) => {
       context: {
         id,
       },
-    });
-  });
+    })
+  })
 
   // Tag pages:
-  let tags = [];
+  let tags = []
   // Iterate through each post, putting all found tags into `tags`
-  posts.forEach((edge) => {
+  posts.forEach(edge => {
     if (get(edge, `node.frontmatter.tags`)) {
-      tags = tags.concat(edge.node.frontmatter.tags);
+      tags = tags.concat(edge.node.frontmatter.tags)
     }
-  });
+  })
   // Eliminate duplicate tags
-  tags = uniq(tags);
+  tags = uniq(tags)
 
   // Make tag pages
-  tags.forEach((tag) => {
-    const tagPath = `/tags/${kebabCase(tag)}/`;
+  tags.forEach(tag => {
+    const tagPath = `/tags/${kebabCase(tag)}/`
 
     createPage({
       path: tagPath,
@@ -71,21 +72,21 @@ exports.createPages = async ({ actions, graphql }) => {
       context: {
         tag,
       },
-    });
-  });
-};
+    })
+  })
+}
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions;
-  fmImagesToRelative(node); // convert image paths for gatsby images
+  const { createNodeField } = actions
+  fmImagesToRelative(node) // convert image paths for gatsby images
 
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode });
+    const value = createFilePath({ node, getNode })
 
     createNodeField({
       name: `slug`,
       node,
       value,
-    });
+    })
   }
-};
+}

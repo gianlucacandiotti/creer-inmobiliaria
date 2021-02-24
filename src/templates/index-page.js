@@ -2,9 +2,10 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Link, graphql } from "gatsby"
 
-import Layout from "../components/Layout"
-import Features from "../components/Features"
-import BlogRoll from "../components/BlogRoll"
+import Layout from "@/components/Layout"
+import Features from "@/components/Features"
+import BlogRoll from "@/components/BlogRoll"
+import PropertiesHighlight from "@/components/PropertiesHighlight"
 
 export const IndexPageTemplate = ({
   image,
@@ -16,6 +17,47 @@ export const IndexPageTemplate = ({
   intro,
 }) => (
   <div>
+    <PropertiesHighlight
+      data={[
+        {
+          id: "1",
+          title: "Departamento de estreno con linea blanca",
+          locationStreetAddress: "Albacete 215",
+          locationSpecifier: "dpto. 101",
+          locationDistrict: "La Molina",
+          locationCity: "Lima",
+          currency: "USD",
+          price: 248000,
+          roomCount: 3,
+          areaTotal: 96,
+        },
+        {
+          id: "2",
+          title: "Departamento de estreno con linea blanca",
+          locationStreetAddress: "Albacete 215",
+          locationSpecifier: "dpto. 101",
+          locationDistrict: "La Molina",
+          locationCity: "Lima",
+          currency: "USD",
+          price: 248000,
+          roomCount: 3,
+          areaTotal: 96,
+        },
+        {
+          id: "3",
+          title: "Departamento de estreno con linea blanca",
+          locationStreetAddress: "Albacete 215",
+          locationSpecifier: "dpto. 101",
+          locationDistrict: "La Molina",
+          locationCity: "Lima",
+          currency: "USD",
+          price: 248000,
+          roomCount: 3,
+          areaTotal: 96,
+        },
+      ]}
+    />
+
     <div
       className="full-width-image margin-top-0"
       style={{

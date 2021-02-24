@@ -6,9 +6,7 @@ import PreviewCompatibleImage from "./PreviewCompatibleImage"
 
 const BlogRoll = ({
   data: {
-    allMarkdownRemark: {
-      edges: { posts },
-    },
+    allMarkdownRemark: { edges: posts },
   },
 }) => (
   <div className="columns is-multiline">
