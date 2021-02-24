@@ -2,7 +2,6 @@ const screens = require("./tailwind/screens")
 const colors = require("./tailwind/colors")
 const variants = require("./tailwind/variants")
 const fontFamily = require("./tailwind/fontFamily")
-const fontSize = require("./tailwind/fontSize")
 
 // See https://tailwindcss.com/docs/configuration for details
 module.exports = {
@@ -13,7 +12,11 @@ module.exports = {
     },
     screens,
     fontFamily,
-    fontSize,
+    // Class overrides
+    container: {
+      center: true,
+      padding: "2rem",
+    },
   },
   variants: {
     extend: variants,
