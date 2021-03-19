@@ -16,12 +16,12 @@ const Navbar = () => {
   return (
     <header className="bg-gray-100">
       <div className="container sm:flex sm:justify-between sm:py-2">
-        <div className="flex items-center justify-between px-4 py-2 sm:px-0 sm:p-0">
+        <div className="flex items-center justify-between py-2 sm:py-0">
           <img src={logo} alt="Creer Inmobiliaria" className="h-20" />
 
           <button
             type="button"
-            className="block text-gray-800 hover:text-pink-600 focus:text-pink-600 focus:outline-none sm:hidden"
+            className="block text-gray-800 hover:text-pink-600 focus:text-pink-600 focus:outline-none focus:ring sm:hidden"
             onClick={toggleHamburger}
           >
             {!active ? (

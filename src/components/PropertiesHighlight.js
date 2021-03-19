@@ -7,7 +7,7 @@ import PropertyHighlight from "@/components/PropertyHighlight"
 import Button from "@/components/Button"
 
 const PropertiesHighlight = ({ data: properties }) => (
-  <div className="py-12 px-6 xl:container">
+  <div className="container py-12">
     <h2 className="font-varela-round font-bold text-blue-800 text-4xl text-center mb-12">
       Nuestro Exclusivo Catálogo De Propiedades
     </h2>
