@@ -1,6 +1,6 @@
 ---
 templateKey: property
-title: Departamento de estreno en la Molina
+title: Departamento de estreno en la Molin
 description: Departamento nuevo con línea  blanca.
 featured: false
 location_street_address: Albacete 216
