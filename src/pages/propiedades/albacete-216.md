@@ -1,14 +1,14 @@
 ---
 templateKey: property
-title: Departamento de estreno en la Molina
-description: Departamento nuevo con línea  blanca.
-featured: true
-location_street_address: Albacete 215
-location_specifier: dpto.  101
+title: Departamento de estreno en la Molin
+description: Departamento nuevo con línea blanca.
+featured: false
+location_street_address: Albacete 216
+location_specifier: dpto. 203
 location_district: La Molina
 location_city: Lima
 currency: USD
-price: 100000
+price: 95000
 room_count: 3
 area_total: 80
 images:

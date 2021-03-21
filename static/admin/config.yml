@@ -37,7 +37,7 @@ collections:
   - name: "properties"
     label: "Propiedades"
     label_singular: "Propiedad"
-    folder: "src/pages/propiedades/entries"
+    folder: "src/pages/propiedades"
     create: true
     identifier_field: location_street_address
     fields:
