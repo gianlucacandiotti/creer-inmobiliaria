@@ -1,6 +1,9 @@
 import CMS from "netlify-cms-app"
+import { es } from "netlify-cms-locales"
 import uploadcare from "netlify-cms-media-library-uploadcare"
 import cloudinary from "netlify-cms-media-library-cloudinary"
+
+CMS.registerLocale("es", es)
 
 import { AboutPagePreview } from "./preview-templates/AboutPagePreview"
 import { BlogPostPreview } from "./preview-templates/BlogPostPreview"
