@@ -1,6 +1,7 @@
 import React from "react"
+import PropTypes from "prop-types"
 
-import { PropertyProps } from "@/types/property"
+import { Property } from "@/models/Property"
 import { formatPrice, transformCurrencyToSymbol } from "@/utils/string-utils"
 
 const PropertyHighlight = ({ data }) => (
@@ -23,7 +24,7 @@ const PropertyHighlight = ({ data }) => (
     <div className="py-4">
       <div className="flex justify-between text-blue-800 font-semibold">
         <span>
-          {data.locationStreetAddress} {data.locationSpecifier}
+          {data.location.streetAddress} {data.location.specifier}
         </span>
 
         <span>
@@ -34,7 +35,7 @@ const PropertyHighlight = ({ data }) => (
 
       <div className="flex justify-between text-sm text-gray-700">
         <span>
-          {data.locationDistrict}, {data.locationCity}
+          {data.location.district}, {data.location.city}
         </span>
 
         <span>{data.areaTotal}.00 m²</span>
@@ -44,7 +45,7 @@ const PropertyHighlight = ({ data }) => (
 )
 
 PropertyHighlight.propTypes = {
-  data: PropertyProps,
+  data: PropTypes.instanceOf(Property),
 }
 
 export default PropertyHighlight

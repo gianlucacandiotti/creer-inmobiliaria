@@ -49,6 +49,7 @@ collections:
         }
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Descripción", name: "description", widget: "text" }
+      - { label: "Fecha de publicación", name: "date", widget: "datetime" }
       - { label: "Mostrar como destacado", name: "featured", widget: "boolean" }
       - {
           label: "Dirección 1 (Eg. Albacete 215)",

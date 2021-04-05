@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { kebabCase } from "lodash"
+import { kebabCase } from "lodash-es"
 import { Helmet } from "react-helmet"
 import { Link, graphql } from "gatsby"
 
