@@ -13,7 +13,7 @@ const PropertiesHighlight = ({ data: properties }) => (
       Nuestro Exclusivo Catálogo De Propiedades
     </h2>
 
-    <div className="sm:flex sm:justify-between sm:space-x-6 xl:space-x-8">
+    <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
       {properties.map((property, i) => (
         <div
           key={property.id}

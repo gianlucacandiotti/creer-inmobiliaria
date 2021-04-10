@@ -5,7 +5,7 @@ import { Property } from "@/models/Property"
 import { formatPrice, transformCurrencyToSymbol } from "@/utils/string-utils"
 
 const PropertyHighlight = ({ data }) => (
-  <div className="mb-6 last:mb-0">
+  <div>
     <div className="relative">
       <div className="group absolute top-0 bottom-0 w-full flex items-center justify-center p-4 bg-transparent transition duration-200 ease-in-out hover:bg-blue-800 hover:bg-opacity-75">
         <span className="text-lg text-transparent text-center transition duration-200 ease-in-out group-hover:text-white">
@@ -21,7 +21,7 @@ const PropertyHighlight = ({ data }) => (
       </div>
     </div>
 
-    <div className="py-4">
+    <div className="mt-4">
       <div className="flex justify-between text-blue-800 font-semibold">
         <span>
           {data.location.streetAddress} {data.location.specifier}
