@@ -12,6 +12,7 @@ export function Property(data) {
   this.roomCount = data?.roomCount || 0
   this.areaTotal = data?.areaTotal || 0
   this.images = data?.images || []
+  this.slug = data?.slug || ""
 }
 
 const propertyToApiMap = [
@@ -35,6 +36,7 @@ const propertyToApiMap = [
   ["roomCount", "frontmatter.room_count"],
   ["areaTotal", "frontmatter.area_total"],
   ["images", "frontmatter.images"],
+  ["slug", "fields.slug"],
 ]
 
 export const propertyMapper = {

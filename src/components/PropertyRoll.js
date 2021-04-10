@@ -48,6 +48,9 @@ export default () => (
                 image
               }
             }
+            fields {
+              slug
+            }
           }
         }
       }
