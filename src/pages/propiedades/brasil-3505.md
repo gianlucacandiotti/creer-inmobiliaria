@@ -2,6 +2,7 @@
 templateKey: property
 title: Departamento de estreno en Magdalena
 description: Departamento listo para entregar en 2022.
+date: 2021-04-10T18:50:43.451Z
 featured: true
 location_street_address: Brasil 3505
 location_specifier: dpto. 501
