@@ -1,7 +1,7 @@
 import React from "react"
 import cx from "classnames"
 import PropTypes from "prop-types"
-import { graphql, StaticQuery } from "gatsby"
+import { Link, graphql, StaticQuery } from "gatsby"
 
 import { Property, propertyMapper } from "@/models/Property"
 import PropertyHighlight from "@/components/PropertyHighlight"
@@ -29,7 +29,9 @@ const PropertiesHighlight = ({ data: properties }) => (
     </div>
 
     <div className="flex justify-center py-8">
-      <Button>VER TODAS LAS PROPIEDADES</Button>
+      <Link to="/propiedades">
+        <Button>VER TODAS LAS PROPIEDADES</Button>
+      </Link>
     </div>
   </div>
 )
