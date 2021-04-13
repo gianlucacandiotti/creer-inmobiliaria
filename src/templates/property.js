@@ -2,6 +2,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
+import { Property as PropertyModel } from "@/models/Property"
+
 import Layout from "../components/Layout"
 
 const Property = ({ data }) => {
@@ -13,9 +15,7 @@ const Property = ({ data }) => {
 }
 
 Property.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
-  }),
+  data: PropTypes.instanceOf(PropertyModel),
 }
 
 export default Property
@@ -27,6 +27,22 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
+        date
+        featured
+        location_street_address
+        location_specifier
+        location_district
+        location_city
+        currency
+        price
+        room_count
+        area_total
+        images {
+          image
+        }
+      }
+      fields {
+        slug
       }
     }
   }
