@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import cx from "classnames"
 import { useEmblaCarousel } from "embla-carousel/react"
 import { FaTimes } from "@react-icons/all-files/fa/FaTimes"
 import { FaChevronLeft } from "@react-icons/all-files/fa/FaChevronLeft"
@@ -7,16 +8,17 @@ import { FaChevronRight } from "@react-icons/all-files/fa/FaChevronRight"
 
 import Modal from "@/components/Modal"
 
-const ImageSliderModal = ({ images = [], onClose }) => {
+const ImageSliderModal = ({ images = [], startIndex, onClose }) => {
   const [viewportRef, embla] = useEmblaCarousel({
     containScroll: "trimSnaps",
     loop: true,
     inViewThreshold: 0.1,
+    startIndex,
   })
 
   const [isScrollPrevEnabled, setIsScrollPrevEnabled] = React.useState(false)
   const [isScrollNextEnabled, setIsScrollNextEnabled] = React.useState(false)
-  const [currentSlide, setCurrentSlide] = React.useState(1)
+  const [currentSlide, setCurrentSlide] = React.useState(null)
 
   const scrollPrev = React.useCallback(() => embla?.scrollPrev(), [embla])
   const scrollNext = React.useCallback(() => embla?.scrollNext(), [embla])
@@ -104,7 +106,7 @@ const ImageSliderModal = ({ images = [], onClose }) => {
               >
                 <div className="relative overflow-hidden">
                   <img
-                    className="max-h-90vh"
+                    className={cx({ hidden: !embla }, "max-h-90vh")}
                     src={image.image}
                     alt="Imagen de la propiedad"
                   />
@@ -114,7 +116,12 @@ const ImageSliderModal = ({ images = [], onClose }) => {
           </div>
         </div>
 
-        <div className="text-lg leading-none text-white absolute top-3 left-3">
+        <div
+          className={cx(
+            { hidden: currentSlide === null },
+            "text-lg leading-none text-white absolute top-3 left-3"
+          )}
+        >
           {currentSlide} / {embla?.slideNodes().length}
         </div>
 
@@ -145,6 +152,7 @@ const ImageSliderModal = ({ images = [], onClose }) => {
 
 ImageSliderModal.propTypes = {
   images: PropTypes.array,
+  startIndex: PropTypes.number,
   onClose: PropTypes.func,
 }
 

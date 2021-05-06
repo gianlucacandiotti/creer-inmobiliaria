@@ -43,7 +43,7 @@ const PropertyPageTemplate = ({ data }) => {
                     <img
                       className="absolute block top-1/2 left-1/2 w-auto min-w-full min-h-full max-w-none transform -translate-y-1/2 -translate-x-1/2"
                       src={image.image}
-                      onClick={() => setIsImageSliderOpen(true)}
+                      onClick={() => setIsImageSliderOpen({ index: i })}
                       alt="Imagen de la propiedad"
                     />
                   </div>
@@ -57,10 +57,8 @@ const PropertyPageTemplate = ({ data }) => {
       {isImageSliderOpen && (
         <ImageSliderModal
           images={data.images}
-          onClose={() => {
-            console.log("enters")
-            setIsImageSliderOpen(false)
-          }}
+          startIndex={isImageSliderOpen.index}
+          onClose={() => setIsImageSliderOpen(false)}
         />
       )}
 
