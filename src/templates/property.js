@@ -12,7 +12,7 @@ const PropertyPageTemplate = ({ data }) => {
     dragFree: true,
     containScroll: "trimSnaps",
     loop: true,
-    align: 0.1,
+    align: 0.075,
   })
 
   const [isImageSliderOpen, setIsImageSliderOpen] = React.useState(false)
@@ -36,14 +36,14 @@ const PropertyPageTemplate = ({ data }) => {
             <div className="flex select-none -ml-4">
               {data.images.map((image, i) => (
                 <div
-                  className="relative min-w-40/100 pl-4 sm:min-w-20/100 lg:min-w-16/100 xl:min-w-11/100"
+                  className="relative pl-4 min-w-42/100 sm:min-w-21/100 lg:min-w-17/100 xl:min-w-12/100"
                   key={i}
                 >
-                  <div className="relative overflow-hidden h-32">
+                  <div className="relative overflow-hidden h-28 sm:h-32">
                     <img
-                      className="absolute block top-1/2 left-1/2 w-auto min-w-full min-h-full max-w-none transform -translate-y-1/2 -translate-x-1/2"
+                      className="absolute block top-1/2 left-1/2 w-auto min-w-full min-h-full max-w-none max-h-44 transform -translate-y-1/2 -translate-x-1/2"
                       src={image.image}
-                      onClick={() => setIsImageSliderOpen({ index: i })}
+                      // onClick={() => setIsImageSliderOpen({ index: i })}
                       alt="Imagen de la propiedad"
                     />
                   </div>
