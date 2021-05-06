@@ -3,3 +3,12 @@
 @tailwind components;
 /*! purgecss end ignore */
 @tailwind utilities;
+
+.embla__viewport.is-draggable {
+  cursor: move;
+  cursor: grab;
+}
+
+.embla__viewport.is-dragging {
+  cursor: grabbing;
+}
