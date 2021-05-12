@@ -3,8 +3,8 @@ import PropTypes from "prop-types"
 
 const useModalOpen = () => {
   React.useEffect(() => {
-    document.body.style.position = "fixed"
     document.body.style.top = `-${window.scrollY}px`
+    document.body.style.position = "fixed"
 
     return () => {
       const scrollY = document.body.style.top
