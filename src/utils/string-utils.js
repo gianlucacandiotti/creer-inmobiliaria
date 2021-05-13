@@ -8,4 +8,4 @@ export const transformCurrencyToSymbol = currency => {
 }
 
 export const formatPrice = price =>
-  price.toString().replace(/\d(?=(\d{3})$)/g, "$& ")
+  price.toString().replace(/\d(?=(\d{3})$)/g, "$&,")
