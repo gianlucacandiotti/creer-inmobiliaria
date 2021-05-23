@@ -6,9 +6,9 @@ import Layout from "@/components/Layout"
 import PropertiesHighlight from "@/components/PropertiesHighlight"
 
 export const IndexPageTemplate = () => (
-  <div>
+  <Layout>
     <PropertiesHighlight />
-  </div>
+  </Layout>
 )
 
 IndexPageTemplate.propTypes = {
@@ -27,17 +27,15 @@ const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
   return (
-    <Layout>
-      <IndexPageTemplate
-        image={frontmatter.image}
-        title={frontmatter.title}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
-      />
-    </Layout>
+    <IndexPageTemplate
+      image={frontmatter.image}
+      title={frontmatter.title}
+      heading={frontmatter.heading}
+      subheading={frontmatter.subheading}
+      mainpitch={frontmatter.mainpitch}
+      description={frontmatter.description}
+      intro={frontmatter.intro}
+    />
   )
 }
 

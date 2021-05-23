@@ -17,7 +17,7 @@ const PropertyHighlight = ({ data }) => (
 
         <div>
           <img
-            src="https://blok-production.imgix.net/photos/ff16bfe2-566d-487e-9502-f841d0c48fb6/1612773961_87480ec0.jpg?w=600"
+            src={data.images[0].image}
             className="object-cover h-60 w-full"
           />
         </div>
