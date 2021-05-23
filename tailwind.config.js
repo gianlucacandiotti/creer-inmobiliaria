@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       colors,
       height: {
+        140: "35rem" /* 560px */,
         160: "40rem" /* 640px */,
       },
       minWidth: {
