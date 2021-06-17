@@ -1,6 +1,6 @@
 ---
 templateKey: property
-title: Departamento de estreno en la Molina
+title: Spacious triangular terrace in a house completed in 2008 in Rastaspuisto
 description: "The fair-sized and versatile floor plan as well as the desired location already make this apartment attractive, but the rare perfect sea view makes it unique!
 
 
