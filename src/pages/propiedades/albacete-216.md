@@ -8,6 +8,7 @@ location_street_address: Albacete 216
 location_specifier: dpto. 203
 location_district: La Molina
 location_city: Lima
+location_map: '{"type":"Point","coordinates":[-77.0369393,-12.0622682]}'
 currency: USD
 price: 95000
 room_count: 3
