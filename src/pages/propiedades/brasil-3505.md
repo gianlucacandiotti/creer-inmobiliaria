@@ -8,6 +8,7 @@ location_street_address: Brasil 3505
 location_specifier: dpto. 501
 location_district: Magdalena
 location_city: Lima
+location_map: '{"type":"Point","coordinates":[-77.0370888,-12.0662645]}'
 currency: USD
 price: 150000
 room_count: 2
