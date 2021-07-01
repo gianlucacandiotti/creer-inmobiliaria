@@ -8,6 +8,7 @@ location_street_address: Alcanfores 115
 location_specifier: dpto. 101
 location_district: Miraflores
 location_city: Lima
+location_map: '{"type":"Point","coordinates":[-77.0363397,-12.0620126]}'
 currency: USD
 price: 200000
 room_count: 3
