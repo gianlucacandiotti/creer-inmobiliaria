@@ -4,11 +4,15 @@ import { graphql } from "gatsby"
 import { useEmblaCarousel } from "embla-carousel/react"
 import { MdZoomOutMap } from "@react-icons/all-files/md/MdZoomOutMap"
 import { BsBuilding } from "@react-icons/all-files/bs/BsBuilding"
+import { FaPlus } from "@react-icons/all-files/fa/FaPlus"
+import classNames from "classnames"
 
 import { formatPrice, transformCurrencyToSymbol } from "@/utils/string-utils"
 import { Property, propertyMapper } from "@/models/Property"
 import Layout from "@/components/Layout"
 import ImageSliderModal from "@/components/ImageSliderModal"
+import Button from "@/components/Button"
+import Map from "@/components/Map"
 
 const PropertyMainInfo = ({ data }) => {
   const { location, price, currency, areaTotal } = data
@@ -93,12 +97,15 @@ const PropertyPageTemplate = ({ data }) => {
   })
 
   const [isImageSliderOpen, setIsImageSliderOpen] = React.useState(false)
+  const [descriptionExpanded, setDescriptionExpanded] = React.useState(false)
 
   const handleThumbnailClick = index => {
     if (embla.clickAllowed()) {
       setIsImageSliderOpen({ index })
     }
   }
+
+  const [lng, lat] = JSON.parse(data.location.geojson).coordinates
 
   return (
     <Layout>
@@ -161,15 +168,51 @@ const PropertyPageTemplate = ({ data }) => {
         <PropertyMainInfo data={data} />
       </div>
 
-      <div className="container mt-8">
-        <h4 className="text-2xl font-semibold mb-4 text-blue-800">
-          A triangle completed in 2002 with a magnificent sea view in
-          Aurinkolahti from a valuable property
-        </h4>
+      <div className="container mt-8 md:flex md:items-start justify-between">
+        <div>
+          <h4 className="text-2xl font-semibold mb-4 text-blue-800">
+            {data.title}
+          </h4>
 
-        <p className="text-lg leading-8 whitespace-pre-line text-gray-800">
-          {data.description}
-        </p>
+          <p
+            className={classNames(
+              "text-lg leading-8 whitespace-pre-line text-gray-800 relative max-h-48 transition-size duration-1000 ease-in-out overflow-hidden md:max-h-full ",
+              {
+                "max-h-1248": descriptionExpanded,
+              }
+            )}
+          >
+            {data.description}
+
+            {!descriptionExpanded && (
+              <span
+                className="absolute top-1/2 bottom-0 left-0 right-0 bg-gradient-to-b from-transparent to-white md:hidden"
+                aria-hidden="true"
+              />
+            )}
+          </p>
+
+          {!descriptionExpanded && (
+            <button
+              className="flex justify-between items-center text-lg text-blue-800 font-semibold mt-3 md:hidden"
+              onClick={() => setDescriptionExpanded(!descriptionExpanded)}
+            >
+              <FaPlus className="text-xl mr-1" /> LEER DESCRIPCIÓN COMPLETA
+            </button>
+          )}
+        </div>
+
+        <div className="mt-8 tracking-widest bg-blue-50 border-t-2 border-blue-200 p-8 text-center md:mt-0 md:flex-shrink-0 md:ml-8 md:pt-14 md:pb-14">
+          <p className="mb-4 font-semibold text-blue-700">
+            RESERVA UN RECORRIDO
+          </p>
+
+          <Button cta>AGENDA UNA VISITA</Button>
+        </div>
+      </div>
+
+      <div className="container mt-8 h-96">
+        <Map lng={lng} lat={lat} />
       </div>
     </Layout>
   )
@@ -214,6 +257,7 @@ export const pageQuery = graphql`
         location_specifier
         location_district
         location_city
+        location_map
         currency
         price
         room_count

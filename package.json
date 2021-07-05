@@ -36,6 +36,7 @@
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",
     "lodash-webpack-plugin": "^0.11.6",
+    "mapbox-gl": "^2.3.1",
     "netlify-cms-app": "^2.14.37",
     "netlify-cms-locales": "^1.29.0",
     "normalize.css": "^8.0.1",

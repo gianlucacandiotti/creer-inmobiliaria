@@ -30,14 +30,18 @@ module.exports = {
         "45/100": "45%",
       },
       minHeight: {
-        80: "20rem" /* 320px */,
+        80: "20rem",
       },
       maxWidth: {
         "90vw": "90vw",
       },
       maxHeight: {
-        160: "40rem" /* 640px */,
+        160: "40rem",
+        1248: "312rem",
         "90vh": "90vh",
+      },
+      transitionProperty: {
+        size: "height, max-height, width, max-width",
       },
     },
     screens,
