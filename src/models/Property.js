@@ -28,6 +28,7 @@ const propertyToApiMap = [
         specifier: apiObj.frontmatter.location_specifier,
         district: apiObj.frontmatter.location_district,
         city: apiObj.frontmatter.location_city,
+        geojson: apiObj.frontmatter.location_map,
       },
     }),
   ],

@@ -63,6 +63,7 @@ collections:
         }
       - { label: "Distrito", name: "location_district", widget: "string" }
       - { label: "Ciudad", name: "location_city", widget: "string" }
+      - { label: "Ubicación en el mapa", name: "location_map", widget: "map" }
       - {
           label: "Tipo de moneda",
           name: "currency",

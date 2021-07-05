@@ -12,6 +12,7 @@ import { Property, propertyMapper } from "@/models/Property"
 import Layout from "@/components/Layout"
 import ImageSliderModal from "@/components/ImageSliderModal"
 import Button from "@/components/Button"
+import Map from "@/components/Map"
 
 const PropertyMainInfo = ({ data }) => {
   const { location, price, currency, areaTotal } = data
@@ -104,6 +105,8 @@ const PropertyPageTemplate = ({ data }) => {
     }
   }
 
+  const [lng, lat] = JSON.parse(data.location.geojson).coordinates
+
   return (
     <Layout>
       <div className="grid grid-cols-12 gap-5">
@@ -165,7 +168,7 @@ const PropertyPageTemplate = ({ data }) => {
         <PropertyMainInfo data={data} />
       </div>
 
-      <div className="container mt-8 md:flex md:items-start">
+      <div className="container mt-8 md:flex md:items-start justify-between">
         <div>
           <h4 className="text-2xl font-semibold mb-4 text-blue-800">
             {data.title}
@@ -206,6 +209,10 @@ const PropertyPageTemplate = ({ data }) => {
 
           <Button cta>AGENDA UNA VISITA</Button>
         </div>
+      </div>
+
+      <div className="container mt-8 h-96">
+        <Map lng={lng} lat={lat} />
       </div>
     </Layout>
   )
@@ -250,6 +257,7 @@ export const pageQuery = graphql`
         location_specifier
         location_district
         location_city
+        location_map
         currency
         price
         room_count
