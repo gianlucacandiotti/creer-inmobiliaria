@@ -14,7 +14,7 @@ import ImageSliderModal from "@/components/ImageSliderModal"
 import Button from "@/components/Button"
 import Map from "@/components/Map"
 
-const PropertyMainInfo = ({ data }) => {
+export const PropertyMainInfo = ({ data }) => {
   const { location, price, currency, areaTotal } = data
 
   return (
@@ -86,6 +86,39 @@ const PropertyMainInfo = ({ data }) => {
 
 PropertyMainInfo.propTypes = {
   data: PropTypes.instanceOf(Property),
+}
+
+export const PropertyDetailedInfo = ({ title, columns }) => {
+  return (
+    <div>
+      <span className="block text-3xl font-semibold mb-6 text-blue-800">
+        {title}
+      </span>
+
+      <div className={`grid grid-cols-${columns.length} gap-6`}>
+        {columns.map(column =>
+          column.map(item => (
+            <div key={item.title} className="grid grid-cols-2 gap-6">
+              <span className="block text-lg text-blue-800">{item.title}:</span>
+              <span className="block text-lg text-gray-700">{item.value}</span>
+            </div>
+          ))
+        )}
+      </div>
+    </div>
+  )
+}
+
+PropertyDetailedInfo.propTypes = {
+  title: PropTypes.string,
+  columns: PropTypes.arrayOf(
+    PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string,
+        value: PropTypes.string,
+      })
+    )
+  ),
 }
 
 const PropertyPageTemplate = ({ data }) => {
@@ -170,9 +203,9 @@ const PropertyPageTemplate = ({ data }) => {
 
       <div className="container mt-8 md:flex md:items-start justify-between">
         <div>
-          <h4 className="text-2xl font-semibold mb-4 text-blue-800">
+          <span className="block text-2xl font-semibold mb-4 text-blue-800">
             {data.title}
-          </h4>
+          </span>
 
           <p
             className={classNames(
@@ -213,6 +246,42 @@ const PropertyPageTemplate = ({ data }) => {
 
       <div className="container mt-8 h-96">
         <Map lng={lng} lat={lat} />
+      </div>
+
+      <div className="container mt-8 mb-8">
+        <PropertyDetailedInfo
+          title="Carácterísticas generales"
+          columns={[
+            [
+              {
+                title: "Precio",
+                value: data.price,
+              },
+              {
+                title: "Mantenimiento",
+                value: data.price,
+              },
+              {
+                title: "Area total",
+                value: data.areaTotal,
+              },
+            ],
+            [
+              {
+                title: "Precio",
+                value: data.price,
+              },
+              {
+                title: "Mantenimiento",
+                value: data.price,
+              },
+              {
+                title: "Area total",
+                value: data.areaTotal,
+              },
+            ],
+          ]}
+        />
       </div>
     </Layout>
   )

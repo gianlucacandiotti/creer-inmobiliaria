@@ -7,8 +7,8 @@ import IconLink from "@/components/IconLink"
 
 const Footer = () => (
   <footer className="bg-gray-100">
-    <div className="container py-4 sm:grid sm:grid-cols-2 sm:gap-4 xl:grid-cols-4">
-      <div className="mb-6">
+    <div className="container py-8 sm:grid sm:grid-cols-2 sm:gap-4 xl:grid-cols-4">
+      <div className="mb-6 sm:mb-0">
         <Link to="/">
           <img src={logo} alt="Creer Inmobiliaria" className="h-20" />
         </Link>
@@ -18,13 +18,13 @@ const Footer = () => (
         </p>
       </div>
 
-      <div className="text-gray-700 text-base mb-6 flex flex-col">
+      <div className="text-gray-700 text-base mb-6 flex flex-col sm:mb-0">
         <span>Jr. Albacete 215, La Molina</span>
 
         <span>hola@creerinmobiliaria.com</span>
       </div>
 
-      <div className="text-gray-700 text-base mb-6">
+      <div className="text-gray-700 text-base mb-6 sm:mb-0">
         <ul>
           <li>
             <Link to="/propiedades">Propiedades</Link>
