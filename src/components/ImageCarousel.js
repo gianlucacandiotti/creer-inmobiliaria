@@ -54,7 +54,7 @@ const ImageCarousel = ({ images, onThumbnailClick }) => {
 }
 
 ImageCarousel.propTypes = {
-  images: PropTypes.arrayOf(PropTypes.string),
+  images: PropTypes.array,
   onThumbnailClick: PropTypes.func,
 }
 

@@ -42,8 +42,6 @@ const ImageSliderModal = ({ images = [], startIndex, onClose }) => {
       switch (event.key) {
         case "Left": // IE/Edge specific value
         case "ArrowLeft":
-          console.log("test")
-          console.log("isScrollPrevEnabled")
           if (isScrollPrevEnabled) {
             scrollPrev()
           }

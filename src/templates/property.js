@@ -7,19 +7,21 @@ import Layout from "@/components/Layout"
 import ImageCarousel from "@/components/ImageCarousel"
 import ImageSliderModal from "@/components/ImageSliderModal"
 import PropertyDescription from "@/components/PropertyDescription"
-import Button from "@/components/Button"
 import Map from "@/components/Map"
 import PropertyMainInfo from "@/components/PropertyMainInfo"
 import PropertyDetailedInfo from "@/components/PropertyDetailedInfo"
+import PropertyContactForm from "@/components/PropertyContactForm"
 
-const PropertyPageTemplate = ({ data }) => {
+const PropertyPageTemplate = ({ data, slug }) => {
   const [isImageSliderOpen, setIsImageSliderOpen] = React.useState(false)
+  const { location } = data
 
   const handleThumbnailClick = index => {
     setIsImageSliderOpen({ index })
   }
 
-  const [lng, lat] = JSON.parse(data.location.geojson).coordinates
+  const [lng, lat] = JSON.parse(location.geojson).coordinates
+  const propertyAddress = `${location.streetAddress} ${location.specifier} ${location.district}, ${location.city}`
 
   return (
     <Layout>
@@ -54,18 +56,18 @@ const PropertyPageTemplate = ({ data }) => {
         <PropertyMainInfo data={data} />
       </div>
 
-      <div className="container mt-8 md:flex md:items-start justify-between">
+      <div className="container mt-8 md:flex md:items-start md:justify-between md:space-x-8">
         <PropertyDescription
           title={data.title}
           description={data.description}
         />
 
-        <div className="mt-8 tracking-widest bg-blue-50 border-t-2 border-blue-200 p-8 text-center md:mt-0 md:flex-shrink-0 md:ml-8 md:pt-14 md:pb-14">
+        <div className="mt-8 tracking-widest bg-blue-50 border-t-2 border-blue-200 p-8 text-center md:mt-0 md:flex-shrink-0 md:pt-14 md:pb-14 md:w-96">
           <p className="mb-4 font-semibold text-blue-700">
             RESERVA UN RECORRIDO
           </p>
 
-          <Button cta>AGENDA UNA VISITA</Button>
+          <PropertyContactForm propertyAddress={propertyAddress} slug={slug} />
         </div>
       </div>
 
@@ -114,12 +116,14 @@ const PropertyPageTemplate = ({ data }) => {
 
 PropertyPageTemplate.propTypes = {
   data: PropTypes.instanceOf(Property),
+  slug: PropTypes.string,
 }
 
 const PropertyPage = ({ data }) => {
   return (
     <PropertyPageTemplate
       data={propertyMapper.mapApiToModel(data.markdownRemark)}
+      slug={data.markdownRemark.fields.slug}
     />
   )
 }

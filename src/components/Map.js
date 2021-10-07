@@ -1,6 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
-import mapboxgl from "mapbox-gl/dist/mapbox-gl.js"
+import mapboxgl from "mapbox-gl"
+
+mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoiZ2lhbmx1Y2FjYW5kaW90dGkiLCJhIjoiY2tjZHN6aHY0MDFzZDJxbW84enYyMGtmcyJ9.xfW9FpxDMMvCHYV05XRuaQ"

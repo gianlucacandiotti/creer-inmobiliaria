@@ -1,0 +1,11 @@
+.custom-checkbox-input {
+  display: none;
+}
+
+.custom-checkbox-input + .custom-checkbox-box .custom-checkbox-icon {
+  display: none;
+}
+
+.custom-checkbox-input:checked + .custom-checkbox-box .custom-checkbox-icon {
+  display: block;
+}
