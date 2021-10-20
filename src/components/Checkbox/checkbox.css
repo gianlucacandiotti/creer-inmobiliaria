@@ -1,5 +1,5 @@
-.custom-checkbox-input {
-  display: none;
+.custom-checkbox-input:focus + .custom-checkbox-box {
+  outline: -webkit-focus-ring-color auto 1px;
 }
 
 .custom-checkbox-input + .custom-checkbox-box .custom-checkbox-icon {

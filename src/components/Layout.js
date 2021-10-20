@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet"
 import { withPrefix } from "gatsby"
 
 import Footer from "../components/Footer"
-import Navbar from "../components/Navbar"
+import Navbar from "./Navbar/Navbar"
 import useSiteMetadata from "./SiteMetadata"
 
 const Layout = ({ children }) => {

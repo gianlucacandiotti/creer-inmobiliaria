@@ -12,7 +12,7 @@ const Checkbox = ({ inputProps, label, error }) => {
           id={inputProps.name}
           type="checkbox"
           {...inputProps}
-          className="custom-checkbox-input"
+          className="custom-checkbox-input sr-only"
         />
 
         <div className="custom-checkbox-box border-blue-700 border border-solid rounded w-6 h-6 flex items-center justify-center bg-white">

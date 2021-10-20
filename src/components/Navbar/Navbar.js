@@ -1,10 +1,11 @@
 import React from "react"
 import { FaBars } from "@react-icons/all-files/fa/FaBars"
 import { FaTimes } from "@react-icons/all-files/fa/FaTimes"
-import cx from "classnames"
 import { Link } from "gatsby"
 
 import logo from "@/img/logo.png"
+
+import MainNavLinks from "./MainNavLinks"
 
 const Navbar = () => {
   const [active, setActive] = React.useState(false)
@@ -34,22 +35,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        <div className={cx({ hidden: !active }, "sm:flex")}>
-          <Link
-            className="block text-pink-600 font-semibold hover:bg-white p-4 sm:flex sm:items-center sm:p-2 sm:hover:bg-transparent sm:text-blue-900 sm:border-b-2 sm:border-transparent sm:hover:border-pink-600"
-            to="/propiedades"
-          >
-            Propiedades
-          </Link>
-
-          <a className="block text-pink-600 font-semibold hover:bg-white p-4 sm:mt-0 sm:flex sm:items-center sm:p-2 sm:hover:bg-transparent sm:text-blue-900 sm:border-b-2 sm:border-transparent sm:hover:border-pink-600">
-            Trabaja con nosotros
-          </a>
-
-          <a className="block text-pink-600 font-semibold hover:bg-white p-4 sm:mt-0 sm:flex sm:items-center sm:p-2 sm:hover:bg-transparent sm:text-blue-900 sm:border-b-2 sm:border-transparent sm:hover:border-pink-600">
-            Contacto
-          </a>
-        </div>
+        <MainNavLinks hiddenMobile={!active} />
       </div>
     </header>
   )
