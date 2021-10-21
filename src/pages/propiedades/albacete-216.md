@@ -1,5 +1,7 @@
 ---
 templateKey: property
+property_type: Departamento
+operation_type: Alquiler
 title: Departamento de estreno en la Molina
 description: Departamento nuevo con línea blanca.
 date: 2021-04-10T18:49:35.655Z
