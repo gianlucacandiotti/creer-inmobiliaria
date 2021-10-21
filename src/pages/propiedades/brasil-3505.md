@@ -1,5 +1,7 @@
 ---
 templateKey: property
+property_type: Casa
+operation_type: Alquiler
 title: Departamento de estreno en Magdalena
 description: Departamento listo para entregar en 2022.
 date: 2021-04-10T18:50:43.451Z
