@@ -47,6 +47,18 @@ collections:
           widget: "hidden",
           default: "property",
         }
+      - {
+          label: "Tipo de propiedad",
+          name: "property_type",
+          widget: "select",
+          options: ["Casa", "Departamento", "Terreno", "Local Comercial"],
+        }
+      - {
+          label: "Tipo de operación",
+          name: "operation_type",
+          widget: "select",
+          options: ["Venta", "Alquiler"],
+        }
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Descripción", name: "description", widget: "text" }
       - { label: "Fecha de publicación", name: "date", widget: "datetime" }
