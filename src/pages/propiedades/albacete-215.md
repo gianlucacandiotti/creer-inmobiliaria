@@ -1,5 +1,7 @@
 ---
 templateKey: property
+property_type: Departamento
+operation_type: Venta
 title: Spacious triangular terrace in a house completed in 2008 in Rastaspuisto
 description: >-
   The fair-sized and versatile floor plan as well as the desired location
