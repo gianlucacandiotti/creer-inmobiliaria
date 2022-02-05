@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { FaCheck } from "@react-icons/all-files/fa/FaCheck"
+import { FaCheck } from "react-icons-all-files/fa/FaCheck"
 
 import "./checkbox.css"
 

@@ -1840,11 +1840,6 @@
     "@react-types/shared" "^3.4.0"
     clsx "^1.1.1"
 
-"@react-icons/all-files@^4.1.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@react-icons/all-files/-/all-files-4.1.0.tgz#477284873a0821928224b6fc84c62d2534d6650b"
-  integrity sha512-hxBI2UOuVaI3O/BhQfhtb4kcGn9ft12RWAFVMUeNjqqhLsHvFtzIkFaptBJpFDANTKoDfdVoHTKZDlwKCACbMQ==
-
 "@react-stately/toggle@^3.2.1":
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/@react-stately/toggle/-/toggle-3.2.1.tgz#8b10b5eb99c3c4df2c36d17a5f23b77773ed7722"
@@ -13378,6 +13373,10 @@ react-hot-loader@^4.12.21, react-hot-loader@^4.8.0:
     react-lifecycles-compat "^3.0.4"
     shallowequal "^1.1.0"
     source-map "^0.7.3"
+
+"react-icons-all-files@https://github.com/alisamar/react-icons-all-files":
+  version "4.3.1"
+  resolved "https://github.com/alisamar/react-icons-all-files#1248e91dbf7246cd551679e35c5abe07f3e28b1a"
 
 react-immutable-proptypes@^2.1.0:
   version "2.2.0"

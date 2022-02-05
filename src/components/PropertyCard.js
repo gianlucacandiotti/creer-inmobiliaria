@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 import { Property } from "@/models/Property"
 import { formatPrice, transformCurrencyToSymbol } from "@/utils/string-utils"
 
-const PropertyHighlight = ({ data }) => (
+const PropertyCard = ({ data }) => (
   <Link to={data.slug}>
     <div>
       <div className="relative">
@@ -40,15 +40,15 @@ const PropertyHighlight = ({ data }) => (
             {data.location.district}, {data.location.city}
           </span>
 
-          <span>{data.areaTotal}.00 m²</span>
+          <span>{data.totalArea}.00 m²</span>
         </div>
       </div>
     </div>
   </Link>
 )
 
-PropertyHighlight.propTypes = {
+PropertyCard.propTypes = {
   data: PropTypes.instanceOf(Property),
 }
 
-export default PropertyHighlight
+export default PropertyCard

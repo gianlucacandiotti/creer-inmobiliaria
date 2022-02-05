@@ -1,5 +1,5 @@
 import React from "react"
-import { FaFacebookF } from "@react-icons/all-files/fa/FaFacebookF"
+import { FaFacebookF } from "react-icons-all-files/fa/FaFacebookF"
 import { Link } from "gatsby"
 
 import logo from "@/img/logo.png"

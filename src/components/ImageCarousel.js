@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useEmblaCarousel } from "embla-carousel/react"
-import { MdZoomOutMap } from "@react-icons/all-files/md/MdZoomOutMap"
+import { MdZoomOutMap } from "react-icons-all-files/md/MdZoomOutMap"
 
 const ImageCarousel = ({ images, onThumbnailClick }) => {
   const [viewportRef, embla] = useEmblaCarousel({

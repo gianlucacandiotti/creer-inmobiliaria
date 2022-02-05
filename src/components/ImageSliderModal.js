@@ -2,9 +2,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import cx from "classnames"
 import { useEmblaCarousel } from "embla-carousel/react"
-import { FaTimes } from "@react-icons/all-files/fa/FaTimes"
-import { FaChevronLeft } from "@react-icons/all-files/fa/FaChevronLeft"
-import { FaChevronRight } from "@react-icons/all-files/fa/FaChevronRight"
+import { FaTimes } from "react-icons-all-files/fa/FaTimes"
+import { FaChevronLeft } from "react-icons-all-files/fa/FaChevronLeft"
+import { FaChevronRight } from "react-icons-all-files/fa/FaChevronRight"
 
 import Modal from "@/components/Modal"
 

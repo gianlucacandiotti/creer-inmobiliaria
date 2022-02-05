@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { FaPlus } from "@react-icons/all-files/fa/FaPlus"
+import { FaPlus } from "react-icons-all-files/fa/FaPlus"
 import classNames from "classnames"
 
 const PropertyDescription = ({ title, description }) => {

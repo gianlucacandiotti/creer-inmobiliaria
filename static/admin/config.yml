@@ -30,7 +30,7 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
-      - { label: "Featured Image", name: "featuredimage", widget: image }
+      - { label: "Featured Image", name: "featuredimage", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
 
@@ -39,7 +39,7 @@ collections:
     label_singular: "Propiedad"
     folder: "src/pages/propiedades"
     create: true
-    identifier_field: location_street_address
+    identifier_field: "location_street_address"
     fields:
       - {
           label: "Template Key",
@@ -51,18 +51,33 @@ collections:
           label: "Tipo de propiedad",
           name: "property_type",
           widget: "select",
-          options: ["Casa", "Departamento", "Terreno", "Local Comercial"],
+          options:
+            [
+              { label: "Casa", value: "house" },
+              { label: "Departamento", value: "apartment" },
+              { label: "Terreno", value: "lot" },
+              { label: "Local Comercial", value: "commercial" },
+            ],
         }
       - {
           label: "Tipo de operación",
           name: "operation_type",
           widget: "select",
-          options: ["Venta", "Alquiler"],
+          options:
+            [
+              { label: "Venta", value: "sell" },
+              { label: "Alquiler", value: "rent" },
+            ],
         }
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Descripción", name: "description", widget: "text" }
       - { label: "Fecha de publicación", name: "date", widget: "datetime" }
-      - { label: "Mostrar como destacado", name: "featured", widget: "boolean" }
+      - {
+          label: "Mostrar como destacado",
+          name: "featured",
+          widget: "boolean",
+          required: false,
+        }
       - {
           label: "Dirección 1 (Eg. Albacete 215)",
           name: "location_street_address",
@@ -72,6 +87,7 @@ collections:
           label: "Dirección 2 (Eg. dpto. 101)",
           name: "location_specifier",
           widget: "string",
+          required: false,
         }
       - { label: "Distrito", name: "location_district", widget: "string" }
       - { label: "Ciudad", name: "location_city", widget: "string" }
@@ -80,19 +96,73 @@ collections:
           label: "Tipo de moneda",
           name: "currency",
           widget: "select",
-          options: ["USD", "PEN"],
+          options:
+            [{ label: "USD", value: "usd" }, { label: "PEN", value: "pen" }],
         }
       - { label: "Precio", name: "price", widget: "number" }
-      - { label: "Número de habitaciones", name: "room_count", widget: number }
-      - { label: "Area total", name: "area_total", widget: number }
+      - {
+          label: "Número de habitaciones",
+          name: "room_count",
+          widget: "number",
+        }
+      - { label: "Area total", name: "total_area", widget: "number" }
+      - {
+          label: "Area construida",
+          name: "built_area",
+          widget: "number",
+          required: false,
+        }
+      - {
+          label: "Año de construcción",
+          name: "construction_year",
+          widget: number,
+        }
+      - { label: "Estado de conservación", name: "condition", widget: "string" }
+      - { label: "Número de piso", name: "floor_number", widget: "number" }
+      - {
+          label: "Licencia comercial",
+          name: "commercial_license",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Rubro comercial",
+          name: "commercial_industry",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Parámetro de edificación",
+          name: "contruction_parameter",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Zonificación",
+          name: "zoning",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Licencia municipal",
+          name: "municipal_license",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Terreno cercado",
+          name: "fenced_lot",
+          widget: "boolean",
+          required: false,
+        }
       - {
           label: "Imágenes",
           name: "images",
-          widget: list,
+          widget: "list",
           fields:
             [
-              { label: "Imágen", name: image, widget: image },
-              { label: "Texto", name: text, widget: text, required: false },
+              { label: "Imágen", name: "image", widget: "image" },
+              { label: "Texto", name: "text", widget: "text", required: false },
             ],
         }
 

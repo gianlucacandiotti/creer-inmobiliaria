@@ -3,14 +3,14 @@ import PropTypes from "prop-types"
 import { graphql, StaticQuery } from "gatsby"
 
 import { Property, propertyMapper } from "@/models/Property"
-import PropertyHighlight from "@/components/PropertyHighlight"
+import PropertyCard from "@/components/PropertyCard"
 
 const PropertyRoll = ({ data: properties = [] }) => {
   return (
     <div className="container py-12">
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {properties.map(property => (
-          <PropertyHighlight key={property.id} data={property} />
+          <PropertyCard key={property.id} data={property} />
         ))}
       </div>
     </div>

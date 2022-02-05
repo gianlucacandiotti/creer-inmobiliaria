@@ -4,10 +4,10 @@ import PropTypes from "prop-types"
 import { Link, graphql, StaticQuery } from "gatsby"
 
 import { Property, propertyMapper } from "@/models/Property"
-import PropertyHighlight from "@/components/PropertyHighlight"
+import PropertyCard from "@/components/PropertyCard"
 import Button from "@/components/Button"
 
-const PropertiesHighlight = ({ data: properties }) => (
+const FeaturedProperties = ({ data: properties }) => (
   <div className="container py-12">
     <h2 className="font-varela-round font-bold text-blue-800 text-4xl text-center mb-12">
       Nuestro Exclusivo Catálogo De Propiedades
@@ -23,7 +23,7 @@ const PropertiesHighlight = ({ data: properties }) => (
             },
           ])}
         >
-          <PropertyHighlight data={property} />
+          <PropertyCard data={property} />
         </div>
       ))}
     </div>
@@ -36,7 +36,7 @@ const PropertiesHighlight = ({ data: properties }) => (
   </div>
 )
 
-PropertiesHighlight.propTypes = {
+FeaturedProperties.propTypes = {
   data: PropTypes.arrayOf(PropTypes.instanceOf(Property)),
 }
 
@@ -76,7 +76,7 @@ export default () => (
       }
     `}
     render={data => (
-      <PropertiesHighlight
+      <FeaturedProperties
         data={data.allMarkdownRemark.nodes.map(property =>
           propertyMapper.mapApiToModel(property)
         )}

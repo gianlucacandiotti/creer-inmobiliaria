@@ -1,6 +1,6 @@
 import axios from "axios"
 
-import { getBaseUrl } from "@/utils/getBaseUrl"
+import { getBaseUrl } from "@/utils/get-base-url"
 
 const propertyContactEmailEndpoint =
   "https://creer-inmobiliaria-5221-dev.twil.io/property-contact-mail"

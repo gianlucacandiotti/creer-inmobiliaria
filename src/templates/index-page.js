@@ -3,11 +3,11 @@ import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
 import Layout from "@/components/Layout"
-import PropertiesHighlight from "@/components/PropertiesHighlight"
+import FeaturedProperties from "@/components/FeaturedProperties"
 
 export const IndexPageTemplate = () => (
   <Layout>
-    <PropertiesHighlight />
+    <FeaturedProperties />
   </Layout>
 )
 

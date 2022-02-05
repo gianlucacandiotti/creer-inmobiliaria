@@ -1,12 +1,18 @@
 import React from "react"
-import PropTypes from "prop-types"
-import { BsBuilding } from "@react-icons/all-files/bs/BsBuilding"
+import { BsBuilding } from "react-icons-all-files/bs/BsBuilding"
 
 import { formatPrice, transformCurrencyToSymbol } from "@/utils/string-utils"
-import { Property } from "@/models/Property"
+import { usePropertyContext } from "@/modules/property/components/PropertyProvider"
+import { getPropertyHighlights } from "@/modules/property/utils/get-highlights"
 
-const PropertyMainInfo = ({ data }) => {
-  const { location, price, currency, areaTotal } = data
+const PropertyHighlights = () => {
+  const property = usePropertyContext()
+
+  const { location, price, currency, totalArea } = property
+
+  const highlights = getPropertyHighlights(property)
+
+  console.log("highlights: ", highlights)
 
   return (
     <div className="p-8 bg-gray-100 h-full">
@@ -27,7 +33,7 @@ const PropertyMainInfo = ({ data }) => {
       </p>
 
       <p className="text-gray-700 text-lg mb-12">
-        {areaTotal}.00 m² ({formatPrice(Math.floor(price / areaTotal))} / m²)
+        {totalArea}.00 m² ({formatPrice(Math.floor(price / totalArea))} / m²)
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -75,8 +81,4 @@ const PropertyMainInfo = ({ data }) => {
   )
 }
 
-PropertyMainInfo.propTypes = {
-  data: PropTypes.instanceOf(Property),
-}
-
-export default PropertyMainInfo
+export default PropertyHighlights
