@@ -1,7 +1,7 @@
 ---
 templateKey: property
-property_type: Casa
-operation_type: Alquiler
+property_type: apartment
+operation_type: sell
 title: Departamento de estreno en Magdalena
 description: Departamento listo para entregar en 2022.
 date: 2021-04-10T18:50:43.451Z
@@ -11,10 +11,14 @@ location_specifier: dpto. 501
 location_district: Magdalena
 location_city: Lima
 location_map: '{"type":"Point","coordinates":[-77.0370888,-12.0662645]}'
-currency: USD
+currency: usd
 price: 150000
 room_count: 2
+total_area: 85
+construction_year: 2008
 area_total: 70
+condition: Muy bueno
+floor_number: 10
 images:
   - image: https://blok-production.imgix.net/photos/f6fe9555-3bf1-4569-938d-e49f5c76dab6/1615548452_45fa9f09.jpg?w=1070
     text: Cocina y comedor.
