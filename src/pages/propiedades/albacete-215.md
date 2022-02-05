@@ -43,7 +43,6 @@ contruction_parameter: ""
 zoning: ""
 municipal_license: ""
 fenced_lot: false
-area_total: 80
 images:
   - image: https://blok-production.imgix.net/photos/de9da77b-e682-419b-822c-6994c87db8ad/1600341996_f3de2ae9.jpg?w=1070
     text: Sala, comedor y cocina.

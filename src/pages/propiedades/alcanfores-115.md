@@ -15,12 +15,11 @@ currency: usd
 price: 200000
 room_count: 3
 total_area: 115
-built_area: ""
+built_area: 115
 construction_year: 2020
 floor_number: 10
 commercial_license: ""
 fenced_lot: false
-area_total: 105
 condition: Muy bueno
 images:
   - image: https://blok-production.imgix.net/photos/74499706-7aff-4ab7-b671-5e005d3bd2d8/1616059917_c8cf2a19.jpg?w=1070

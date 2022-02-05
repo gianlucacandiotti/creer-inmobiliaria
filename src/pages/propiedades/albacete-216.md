@@ -15,10 +15,9 @@ currency: usd
 price: 95000
 room_count: 3
 total_area: 100
-built_area: ""
+built_area: 100
 construction_year: 2010
 fenced_lot: false
-area_total: 80
 condition: Muy bueno
 floor_number: 2
 images:

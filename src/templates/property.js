@@ -165,7 +165,17 @@ export const pageQuery = graphql`
         currency
         price
         room_count
-        area_total
+        total_area
+        built_area
+        construction_year
+        condition
+        floor_number
+        commercial_license
+        commercial_industry
+        contruction_parameter
+        zoning
+        municipal_license
+        fenced_lot
         images {
           image
         }

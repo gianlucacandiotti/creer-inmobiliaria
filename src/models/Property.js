@@ -13,6 +13,7 @@ export const MODEL_KEY = {
   PRICE: "price",
   ROOM_COUNT: "roomCount",
   TOTAL_AREA: "totalArea",
+  BUILT_AREA: "builtArea",
   CONSTRUCTION_YEAR: "constructionYear",
   CONDITION: "condition",
   FLOOR_NUMBER: "floorNumber",
@@ -39,6 +40,7 @@ export function Property(data) {
   this[MODEL_KEY.PRICE] = data?.price || 0
   this[MODEL_KEY.ROOM_COUNT] = data?.roomCount || 0
   this[MODEL_KEY.TOTAL_AREA] = data?.totalArea || 0
+  this[MODEL_KEY.BUILT_AREA] = data?.builtArea || 0
   this[MODEL_KEY.CONSTRUCTION_YEAR] = data?.constructionYear || 0
   this[MODEL_KEY.CONDITION] = data?.condition || ""
   this[MODEL_KEY.FLOOR_NUMBER] = data?.floorNumber || 0
@@ -61,9 +63,8 @@ const propertyToApiMap = [
   [MODEL_KEY.DATE, "frontmatter.date"],
   [MODEL_KEY.FEATURED, "frontmatter.featured"],
   [
-    MODEL_KEY.LOCATION,
     apiObj => ({
-      location: {
+      [MODEL_KEY.LOCATION]: {
         streetAddress: apiObj.frontmatter.location_street_address,
         specifier: apiObj.frontmatter.location_specifier,
         district: apiObj.frontmatter.location_district,
@@ -75,7 +76,8 @@ const propertyToApiMap = [
   [MODEL_KEY.CURRENCY, "frontmatter.currency"],
   [MODEL_KEY.PRICE, "frontmatter.price"],
   [MODEL_KEY.ROOM_COUNT, "frontmatter.room_count"],
-  [MODEL_KEY.TOTAL_AREA, "frontmatter.area_total"],
+  [MODEL_KEY.TOTAL_AREA, "frontmatter.total_area"],
+  [MODEL_KEY.BUILT_AREA, "frontmatter.built_area"],
   [MODEL_KEY.CONSTRUCTION_YEAR, "frontmatter.construction_year"],
   [MODEL_KEY.CONDITION, "frontmatter.condition"],
   [MODEL_KEY.FLOOR_NUMBER, "frontmatter.floor_number"],

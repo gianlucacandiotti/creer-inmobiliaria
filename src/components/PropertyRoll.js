@@ -43,7 +43,8 @@ export default () => (
               currency
               price
               room_count
-              area_total
+              total_area
+              built_area
               images {
                 image
               }

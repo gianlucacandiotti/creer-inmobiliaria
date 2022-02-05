@@ -15,8 +15,8 @@ currency: usd
 price: 150000
 room_count: 2
 total_area: 85
+built_area: 85
 construction_year: 2008
-area_total: 70
 condition: Muy bueno
 floor_number: 10
 images:

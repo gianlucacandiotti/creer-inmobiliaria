@@ -13,6 +13,7 @@ const PropertyHighlights = () => {
   const highlights = getPropertyHighlights(property)
 
   console.log("highlights: ", highlights)
+  const Icon = highlights[0].icon
 
   return (
     <div className="p-8 bg-gray-100 h-full">
@@ -38,12 +39,12 @@ const PropertyHighlights = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div className="flex items-center space-x-2">
-          <BsBuilding className="h-9 w-9 text-blue-800 flex-shrink-0" />
+          <Icon className="h-9 w-9 text-blue-800 flex-shrink-0" />
 
           <div>
-            <p className="text-sm">Tipo de vivienda</p>
+            <p className="text-sm">{highlights[0].label}</p>
 
-            <p className="font-bold">Departamento</p>
+            <p className="font-bold">{highlights[0].text}</p>
           </div>
         </div>
 
