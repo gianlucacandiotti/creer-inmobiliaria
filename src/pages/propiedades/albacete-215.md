@@ -37,11 +37,11 @@ built_area: 90
 construction_year: 2015
 condition: Muy bueno
 floor_number: 5
-commercial_license: "-"
-commercial_industry: "-"
-contruction_parameter: "-"
-zoning: "-"
-municipal_license: "-"
+commercial_license: ""
+commercial_industry: ""
+contruction_parameter: ""
+zoning: ""
+municipal_license: ""
 fenced_lot: false
 area_total: 80
 images:
