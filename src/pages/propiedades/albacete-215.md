@@ -1,7 +1,7 @@
 ---
 templateKey: property
-property_type: Departamento
-operation_type: Venta
+property_type: apartment
+operation_type: rent
 title: Spacious triangular terrace in a house completed in 2008 in Rastaspuisto
 description: >-
   The fair-sized and versatile floor plan as well as the desired location
@@ -29,9 +29,20 @@ location_specifier: dpto. 101
 location_district: La Molina
 location_city: Lima
 location_map: '{"type":"Point","coordinates":[-77.0369393,-12.0622682]}'
-currency: USD
+currency: usd
 price: 100000
 room_count: 3
+total_area: 90
+built_area: 90
+construction_year: 2015
+condition: Muy bueno
+floor_number: 5
+commercial_license: ""
+commercial_industry: ""
+contruction_parameter: ""
+zoning: ""
+municipal_license: ""
+fenced_lot: false
 area_total: 80
 images:
   - image: https://blok-production.imgix.net/photos/de9da77b-e682-419b-822c-6994c87db8ad/1600341996_f3de2ae9.jpg?w=1070

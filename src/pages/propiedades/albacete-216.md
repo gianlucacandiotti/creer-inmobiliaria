@@ -1,7 +1,7 @@
 ---
 templateKey: property
-property_type: Departamento
-operation_type: Alquiler
+property_type: apartment
+operation_type: sell
 title: Departamento de estreno en la Molina
 description: Departamento nuevo con línea blanca.
 date: 2021-04-10T18:49:35.655Z
@@ -11,10 +11,16 @@ location_specifier: dpto. 203
 location_district: La Molina
 location_city: Lima
 location_map: '{"type":"Point","coordinates":[-77.0369393,-12.0622682]}'
-currency: USD
+currency: usd
 price: 95000
 room_count: 3
+total_area: 100
+built_area: ""
+construction_year: 2010
+fenced_lot: false
 area_total: 80
+condition: Muy bueno
+floor_number: 2
 images:
   - image: https://blok-production.imgix.net/photos/de9da77b-e682-419b-822c-6994c87db8ad/1600341996_f3de2ae9.jpg?w=1070
     text: Sala, comedor y cocina.

@@ -1,7 +1,7 @@
 ---
 templateKey: property
-property_type: Casa
-operation_type: Venta
+property_type: apartment
+operation_type: sell
 title: Departamento de estreno en Miraflores
 description: Departamento nuevo con línea blanca.
 date: 2021-04-10T18:50:32.880Z
@@ -11,10 +11,17 @@ location_specifier: dpto. 101
 location_district: Miraflores
 location_city: Lima
 location_map: '{"type":"Point","coordinates":[-77.0363397,-12.0620126]}'
-currency: USD
+currency: usd
 price: 200000
 room_count: 3
+total_area: 115
+built_area: ""
+construction_year: 2020
+floor_number: 10
+commercial_license: ""
+fenced_lot: false
 area_total: 105
+condition: Muy bueno
 images:
   - image: https://blok-production.imgix.net/photos/74499706-7aff-4ab7-b671-5e005d3bd2d8/1616059917_c8cf2a19.jpg?w=1070
     text: Sala.
