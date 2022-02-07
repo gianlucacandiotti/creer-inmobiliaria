@@ -71,6 +71,11 @@ collections:
         }
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Descripción", name: "description", widget: "text" }
+      - {
+          label: "Resumen de características resaltantes",
+          name: "highlights_summary",
+          widget: "text",
+        }
       - { label: "Fecha de publicación", name: "date", widget: "datetime" }
       - {
           label: "Mostrar como destacado",

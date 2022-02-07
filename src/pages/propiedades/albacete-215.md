@@ -22,6 +22,7 @@ description: >-
 
 
   You can get a boat mooring right from the boat dock right in front of the house by joining the Aurinkolahti boat club. The large sandy beach of Aurinkolahti opens next to it. Outdoor terrain next to the Uutelan and Kallahti peninsulas. Vuosaari's excellent golf course is also a short distance away. Excellent public transport links and varied local services nearby.
+highlights_summary: 3 habitaciones, cocina, comedor, dos baños, terraza y lavanderia.
 date: 2021-04-10T18:50:17.293Z
 featured: true
 location_street_address: Albacete 215

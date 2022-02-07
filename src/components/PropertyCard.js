@@ -3,7 +3,11 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 import { Property } from "@/models/Property"
-import { formatPrice, transformCurrencyToSymbol } from "@/utils/string-utils"
+import {
+  formatPrice,
+  formatArea,
+  transformCurrencyToSymbol,
+} from "@/utils/string-utils"
 
 const PropertyCard = ({ data }) => (
   <Link to={data.slug}>
@@ -40,7 +44,7 @@ const PropertyCard = ({ data }) => (
             {data.location.district}, {data.location.city}
           </span>
 
-          <span>{data.totalArea}.00 m²</span>
+          <span>{formatArea(data.totalArea)}</span>
         </div>
       </div>
     </div>

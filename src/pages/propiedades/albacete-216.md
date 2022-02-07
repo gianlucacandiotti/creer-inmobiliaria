@@ -4,6 +4,7 @@ property_type: apartment
 operation_type: sell
 title: Departamento de estreno en la Molina
 description: Departamento nuevo con línea blanca.
+highlights_summary: 3 habitaciones, cocina, comedor, dos baños, terraza y lavanderia.
 date: 2021-04-10T18:49:35.655Z
 featured: false
 location_street_address: Albacete 216

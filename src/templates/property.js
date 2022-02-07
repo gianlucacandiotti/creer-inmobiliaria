@@ -11,7 +11,7 @@ import Map from "@/components/Map"
 import PropertyDetailedInfo from "@/components/PropertyDetailedInfo"
 import PropertyContactForm from "@/components/PropertyContactForm"
 import { PropertyProvider } from "@/modules/property/components/PropertyProvider"
-import PropertyHighlights from "@/modules/property/components/PropertyHighlights"
+import PropertyImportantInfo from "@/modules/property/components/PropertyImportantInfo"
 
 const PropertyPageTemplate = ({ data }) => {
   const [isImageSliderOpen, setIsImageSliderOpen] = React.useState(false)
@@ -37,7 +37,7 @@ const PropertyPageTemplate = ({ data }) => {
           </div>
 
           <div className="hidden lg:block lg:col-span-5">
-            <PropertyHighlights />
+            <PropertyImportantInfo />
           </div>
         </div>
 
@@ -55,7 +55,7 @@ const PropertyPageTemplate = ({ data }) => {
         )}
 
         <div className="lg:hidden">
-          <PropertyHighlights />
+          <PropertyImportantInfo />
         </div>
 
         <div className="container mt-8 md:flex md:items-start md:justify-between md:space-x-8">
@@ -155,6 +155,7 @@ export const pageQuery = graphql`
         operation_type
         title
         description
+        highlights_summary
         date
         featured
         location_street_address

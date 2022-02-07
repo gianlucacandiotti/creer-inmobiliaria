@@ -6,6 +6,7 @@ export const MODEL_KEY = {
   OPERATION_TYPE: "operationType",
   TITLE: "title",
   DESCRIPTION: "description",
+  HIGHLIGHTS_SUMMARY: "highlightsSummary",
   DATE: "date",
   FEATURED: "featured",
   LOCATION: "location",
@@ -33,6 +34,7 @@ export function Property(data) {
   this[MODEL_KEY.OPERATION_TYPE] = data?.operationType || ""
   this[MODEL_KEY.TITLE] = data?.title || ""
   this[MODEL_KEY.DESCRIPTION] = data?.description || ""
+  this[MODEL_KEY.HIGHLIGHTS_SUMMARY] = data?.highlightsSummary || ""
   this[MODEL_KEY.DATE] = data?.date || null
   this[MODEL_KEY.FEATURED] = data?.featured || false
   this[MODEL_KEY.LOCATION] = data?.location || {}
@@ -60,6 +62,7 @@ const propertyToApiMap = [
   [MODEL_KEY.OPERATION_TYPE, "frontmatter.operation_type"],
   [MODEL_KEY.TITLE, "frontmatter.title"],
   [MODEL_KEY.DESCRIPTION, "frontmatter.description"],
+  [MODEL_KEY.HIGHLIGHTS_SUMMARY, "frontmatter.highlights_summary"],
   [MODEL_KEY.DATE, "frontmatter.date"],
   [MODEL_KEY.FEATURED, "frontmatter.featured"],
   [

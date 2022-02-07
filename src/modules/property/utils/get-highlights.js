@@ -9,6 +9,7 @@ import { BsBriefcase } from "react-icons-all-files/bs/BsBriefcase"
 import { GiElevator } from "react-icons-all-files/gi/GiElevator"
 import { GrDocumentText } from "react-icons-all-files/gr/GrDocumentText"
 
+import { formatArea } from "@/utils/string-utils"
 import { MODEL_KEY as PROPERTY_MODEL_KEY } from "@/models/Property"
 import { PROPERTY_TYPE, OPERATION_TYPE } from "@/constants/property-constants"
 
@@ -35,9 +36,10 @@ const mapFieldToHighlight = {
   [PROPERTY_MODEL_KEY.TOTAL_AREA]: {
     label: "Área total",
     icon: BsBorderOuter,
+    formatter: formatArea,
   },
   [PROPERTY_MODEL_KEY.CONSTRUCTION_YEAR]: {
-    label: "Año de contrucción",
+    label: "Año de construcción",
     icon: BsHammer,
   },
   [PROPERTY_MODEL_KEY.CONDITION]: {
@@ -45,7 +47,7 @@ const mapFieldToHighlight = {
     icon: BsStars,
   },
   [PROPERTY_MODEL_KEY.FLOOR_NUMBER]: {
-    label: "Piso",
+    label: "Número de piso",
     icon: GiElevator,
   },
   [PROPERTY_MODEL_KEY.COMMERCIAL_INDUSTRY]: {

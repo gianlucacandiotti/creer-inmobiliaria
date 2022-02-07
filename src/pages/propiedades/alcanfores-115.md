@@ -4,6 +4,7 @@ property_type: apartment
 operation_type: sell
 title: Departamento de estreno en Miraflores
 description: Departamento nuevo con línea blanca.
+highlights_summary: 3 habitaciones, cocina, comedor, dos baños, terraza y lavanderia.
 date: 2021-04-10T18:50:32.880Z
 featured: true
 location_street_address: Alcanfores 115

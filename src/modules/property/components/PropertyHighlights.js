@@ -1,85 +1,47 @@
 import React from "react"
-import { BsBuilding } from "react-icons-all-files/bs/BsBuilding"
+import PropTypes from "prop-types"
 
-import { formatPrice, transformCurrencyToSymbol } from "@/utils/string-utils"
-import { usePropertyContext } from "@/modules/property/components/PropertyProvider"
+import { Property } from "@/models/Property"
 import { getPropertyHighlights } from "@/modules/property/utils/get-highlights"
 
-const PropertyHighlights = () => {
-  const property = usePropertyContext()
+const PropertyHighlight = ({ Icon, label, text, formatter }) => (
+  <div className="flex items-center space-x-2">
+    <Icon className="h-9 w-9 text-blue-800 flex-shrink-0" />
 
-  const { location, price, currency, totalArea } = property
+    <div>
+      <p className="text-sm">{label}</p>
 
+      <p className="font-bold">{formatter ? formatter(text) : text}</p>
+    </div>
+  </div>
+)
+
+PropertyHighlight.propTypes = {
+  Icon: PropTypes.element,
+  label: PropTypes.string,
+  text: PropTypes.string,
+  formatter: PropTypes.func,
+}
+
+const PropertyHighlights = ({ property }) => {
   const highlights = getPropertyHighlights(property)
 
-  console.log("highlights: ", highlights)
-  const Icon = highlights[0].icon
-
   return (
-    <div className="p-8 bg-gray-100 h-full">
-      <h1 className="font-varela-round font-bold text-blue-800 text-3xl mb-2">
-        {location.streetAddress} {location.specifier}
-        <br />
-        {location.district}, {location.city}
-      </h1>
-
-      <p className="text-gray-700 text-lg mb-12">
-        6 rooms, kitchen, bathroom, sauna, 2 separate toilets, balcony, roof
-        terrace, storage room
-      </p>
-
-      <p className="font-varela-round font-bold text-blue-800 text-3xl mb-2">
-        {transformCurrencyToSymbol(currency)}
-        {formatPrice(price)}
-      </p>
-
-      <p className="text-gray-700 text-lg mb-12">
-        {totalArea}.00 m² ({formatPrice(Math.floor(price / totalArea))} / m²)
-      </p>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        <div className="flex items-center space-x-2">
-          <Icon className="h-9 w-9 text-blue-800 flex-shrink-0" />
-
-          <div>
-            <p className="text-sm">{highlights[0].label}</p>
-
-            <p className="font-bold">{highlights[0].text}</p>
-          </div>
-        </div>
-
-        <div className="flex items-center space-x-2">
-          <BsBuilding className="h-9 w-9 text-blue-800 flex-shrink-0" />
-
-          <div>
-            <p className="text-sm">Tipo de vivienda</p>
-
-            <p className="font-bold">Departamento</p>
-          </div>
-        </div>
-
-        <div className="flex items-center space-x-2">
-          <BsBuilding className="h-9 w-9 text-blue-800 flex-shrink-0" />
-
-          <div>
-            <p className="text-sm">Tipo de vivienda</p>
-
-            <p className="font-bold">Departamento</p>
-          </div>
-        </div>
-
-        <div className="flex items-center space-x-2">
-          <BsBuilding className="h-9 w-9 text-blue-800 flex-shrink-0" />
-
-          <div>
-            <p className="text-sm">Tipo de vivienda</p>
-
-            <p className="font-bold">Departamento</p>
-          </div>
-        </div>
-      </div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      {highlights.map(highlight => (
+        <PropertyHighlight
+          key={highlight.label}
+          Icon={highlight.icon}
+          label={highlight.label}
+          text={highlight.text}
+          formatter={highlight.formatter}
+        />
+      ))}
     </div>
   )
+}
+PropertyHighlights.propTypes = {
+  property: PropTypes.instanceOf(Property),
 }
 
 export default PropertyHighlights
