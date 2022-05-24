@@ -1,0 +1,3 @@
+.custom-overlay:focus-within .custom-overlay-content {
+  display: block;
+}

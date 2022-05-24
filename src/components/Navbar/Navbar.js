@@ -35,7 +35,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        <MainNavLinks hiddenMobile={!active} />
+        <MainNavLinks hidden={!active} />
       </div>
     </header>
   )
