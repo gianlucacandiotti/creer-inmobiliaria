@@ -34,4 +34,9 @@ images:
     text: Sala comedor amplia
   - image: /img/img-20220716-wa0009.jpg
   - image: /img/img-20220716-wa0010.jpg
+  - image: /img/img-20220716-wa0021.jpg
+  - image: /img/img-20220716-wa0020.jpg
+  - image: /img/img-20220716-wa0014.jpg
+  - image: /img/img-20220716-wa0018.jpg
+  - image: /img/img-20220716-wa0011.jpg
 ---
