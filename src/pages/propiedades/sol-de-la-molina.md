@@ -39,4 +39,8 @@ images:
   - image: /img/img-20220716-wa0014.jpg
   - image: /img/img-20220716-wa0018.jpg
   - image: /img/img-20220716-wa0011.jpg
+  - image: /img/img-20220716-wa0012.jpg
+  - image: /img/img-20220716-wa0016.jpg
+  - image: /img/img-20220716-wa0017.jpg
+  - image: /img/img-20220716-wa0007.jpg
 ---
