@@ -50,5 +50,16 @@ built_area: 71
 construction_year: 2017
 condition: Excelente
 floor_number: 15
-images: []
+images:
+  - image: /img/img-20220630-wa0050.jpg
+  - image: /img/img-20220630-wa0049.jpg
+  - image: /img/img-20220630-wa0048.jpg
+  - image: /img/img-20220630-wa0026.jpg
+  - image: /img/img-20220630-wa0021.jpg
+  - image: /img/img-20220630-wa0024.jpg
+  - image: /img/img-20220630-wa0027.jpg
+  - image: /img/img-20220630-wa0022.jpg
+  - image: /img/img-20220630-wa0037.jpg
+  - image: /img/img-20220630-wa0045.jpg
+  - image: /img/img-20220630-wa0054.jpg
 ---
