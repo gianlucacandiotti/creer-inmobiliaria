@@ -29,5 +29,9 @@ built_area: 90
 construction_year: 2012
 condition: Excelente
 floor_number: 2
-images: []
+images:
+  - image: /img/img-20220716-wa0006.jpg
+    text: Sala comedor amplia
+  - image: /img/img-20220716-wa0009.jpg
+  - image: /img/img-20220716-wa0010.jpg
 ---
