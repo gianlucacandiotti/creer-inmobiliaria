@@ -1,8 +1,8 @@
 ---
 templateKey: property
 property_type: apartment
-operation_type: sell
-title: Se vende hermoso departamento de estreno
+operation_type: rent
+title: Se Alquila lindo Departamento en Surco
 description: >-
   The fair-sized and versatile floor plan as well as the desired location
   already make this apartment attractive, but the rare perfect sea view makes it
@@ -22,23 +22,22 @@ description: >-
 
 
   You can get a boat mooring right from the boat dock right in front of the house by joining the Aurinkolahti boat club. The large sandy beach of Aurinkolahti opens next to it. Outdoor terrain next to the Uutelan and Kallahti peninsulas. Vuosaari's excellent golf course is also a short distance away. Excellent public transport links and varied local services nearby.
-highlights_summary: Departamento de estreno
+highlights_summary: Departamento de 2 dormitorios, 2baños, balcón, incluye
+  cochera, admite mascotas, vista a la avenida.
 date: 2022-07-08T18:48:28.061Z
 featured: true
-location_street_address: Sol de la Molina
-location_specifier: Dpto. 405
-location_district: La Molina
+location_street_address: Av. Nazarenas  con Av. Caminos del Inca, Surco
+location_specifier: Dpto. 201
+location_district: Santiago de Surco
 location_city: Lima
-location_map: '{"type":"Point","coordinates":[-76.9259718,-12.0905053]}'
-currency: usd
-price: 300000
-room_count: 3
-total_area: 120
-built_area: 120
-construction_year: 2010
+location_map: '{"type":"Point","coordinates":[-76.9837791,-12.1330517]}'
+currency: pen
+price: 2500
+room_count: 2
+total_area: 90
+built_area: 90
+construction_year: 2012
 condition: Excelente
-floor_number: 4
-images:
-  - image: /img/5c89cc7b-9a4d-48d2-b57e-2a7585d3e1b2-9718-00000454d3f750cd.jpg
-  - image: /img/products-full-width.jpg
+floor_number: 2
+images: []
 ---
