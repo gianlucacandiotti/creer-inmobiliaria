@@ -36,10 +36,16 @@ construction_year: 2009
 condition: Muy bueno
 floor_number: 1
 images:
-  - image: https://blok-production.imgix.net/photos/f6fe9555-3bf1-4569-938d-e49f5c76dab6/1615548453_8029b004.jpg?w=1070
-    text: Balcón.
-  - image: https://blok-production.imgix.net/photos/f6fe9555-3bf1-4569-938d-e49f5c76dab6/1615548434_63b46266.jpg?w=1070
-    text: Vista del  edificio.
-  - image: https://blok-production.imgix.net/photos/f6fe9555-3bf1-4569-938d-e49f5c76dab6/1615555988_42d889ef.png?bg=E8F6F7
-    text: Distribución de espacios.
+  - image: /img/img-20220528-wa0008.jpg
+    text: Sala comedor
+  - image: /img/img-20220528-wa0009.jpg
+  - image: /img/img-20220528-wa0010.jpg
+  - image: /img/img-20220528-wa0011.jpg
+  - image: /img/img-20220528-wa0013.jpg
+    text: Patio semi techado
+  - image: /img/img-20220528-wa0018.jpg
+    text: Dormitorio principal
+  - image: /img/img-20220528-wa0019.jpg
+    text: Dormitorio secundario
+  - image: /img/img-20220604-wa0015.jpg
 ---
