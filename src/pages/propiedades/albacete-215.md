@@ -69,4 +69,6 @@ images:
     text: Sauna.
   - image: https://blok-production.imgix.net/photos/de9da77b-e682-419b-822c-6994c87db8ad/1600760093_3f19b6d0.png?bg=E8F6F7
     text: Distribución de espacios.
+  - image: /img/290da9f1-cd2f-4cbf-88b3-6772a3a5c930-9718-0000045496f8cbd6.jpg
+    text: ""
 ---
