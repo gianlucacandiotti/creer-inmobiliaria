@@ -46,7 +46,13 @@ export default () => (
               total_area
               built_area
               images {
-                image
+                image {
+                  childImageSharp {
+                    fluid(maxWidth: 2048, quality: 100) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
               }
             }
             fields {

@@ -171,14 +171,14 @@ export const pageQuery = graphql`
         construction_year
         condition
         floor_number
-        commercial_license
-        commercial_industry
-        contruction_parameter
-        zoning
-        municipal_license
-        fenced_lot
         images {
-          image
+          image {
+            childImageSharp {
+              fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       }
       fields {

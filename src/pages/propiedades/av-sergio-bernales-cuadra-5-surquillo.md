@@ -25,7 +25,7 @@ description: >
   - Terma de 50 litros
 
   - 1 Estacionamiento con mini deposito empotrado a la pared.
-highlights_summary: >-2
+highlights_summary: >2-
    Permite mascotas
   - Edificio con 2 ascensores
 
