@@ -105,8 +105,8 @@ const ImageSliderModal = ({ images = [], startIndex, onClose }) => {
                 <div className="relative overflow-hidden">
                   <img
                     className={cx({ hidden: !embla }, "max-h-90vh")}
-                    src={image.image}
-                    alt="Imagen de la propiedad"
+                    src={image.image.childImageSharp.fluid.src}
+                    alt={image.text || "Imagen de la propiedad"}
                   />
                 </div>
               </div>

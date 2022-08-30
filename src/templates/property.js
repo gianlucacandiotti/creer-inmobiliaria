@@ -12,6 +12,7 @@ import PropertyDetailedInfo from "@/components/PropertyDetailedInfo"
 import PropertyContactForm from "@/components/PropertyContactForm"
 import { PropertyProvider } from "@/modules/property/components/PropertyProvider"
 import PropertyImportantInfo from "@/modules/property/components/PropertyImportantInfo"
+import PreviewCompatibleImage from "@/components/PreviewCompatibleImage"
 
 const PropertyPageTemplate = ({ data }) => {
   const [isImageSliderOpen, setIsImageSliderOpen] = React.useState(false)
@@ -29,10 +30,12 @@ const PropertyPageTemplate = ({ data }) => {
       <Layout>
         <div className="grid grid-cols-12 gap-5">
           <div className="col-span-full min-h-80 overflow-hidden lg:col-span-7 lg:h-140 lg:max-h-full">
-            <img
-              src={data.images[0].image}
-              alt="Property Thumbnaill"
-              className="w-full h-full object-cover"
+            <PreviewCompatibleImage
+              imageInfo={{
+                ...data.images[0].image,
+                alt: "Property Thumbnaill",
+                className: "w-full h-full object-cover",
+              }}
             />
           </div>
 
@@ -179,6 +182,7 @@ export const pageQuery = graphql`
               }
             }
           }
+          text
         }
       }
       fields {

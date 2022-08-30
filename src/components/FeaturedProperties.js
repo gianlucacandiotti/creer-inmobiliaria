@@ -6,7 +6,6 @@ import { Link, graphql, StaticQuery } from "gatsby"
 import { Property, propertyMapper } from "@/models/Property"
 import PropertyCard from "@/components/PropertyCard"
 import Button from "@/components/Button"
-import PreviewCompatibleImage from "@/components/PreviewCompatibleImage"
 
 const FeaturedProperties = ({ data: properties }) => (
   <div className="container py-12">
@@ -25,7 +24,6 @@ const FeaturedProperties = ({ data: properties }) => (
           ])}
         >
           <PropertyCard data={property} />
-          <PreviewCompatibleImage imageInfo={property.images[0].image} />
         </div>
       ))}
     </div>

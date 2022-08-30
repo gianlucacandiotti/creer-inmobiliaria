@@ -3,6 +3,8 @@ import PropTypes from "prop-types"
 import { useEmblaCarousel } from "embla-carousel/react"
 import { MdZoomOutMap } from "react-icons-all-files/md/MdZoomOutMap"
 
+import PreviewCompatibleImage from "@/components/PreviewCompatibleImage"
+
 const ImageCarousel = ({ images, onThumbnailClick }) => {
   const [viewportRef, embla] = useEmblaCarousel({
     dragFree: true,
@@ -34,10 +36,13 @@ const ImageCarousel = ({ images, onThumbnailClick }) => {
                   className="block relative overflow-hidden w-full h-28 focus:outline-black sm:h-32 "
                   onClick={() => handleButtonClick(i)}
                 >
-                  <img
-                    className="absolute block top-1/2 left-1/2 w-auto min-w-full min-h-full max-w-none max-h-44 transform -translate-y-1/2 -translate-x-1/2"
-                    src={image.image}
-                    alt="Imagen de la propiedad"
+                  <PreviewCompatibleImage
+                    imageInfo={{
+                      ...image.image,
+                      alt: image.text || "Imagen de la propiedad",
+                      className:
+                        "absolute block top-1/2 left-1/2 w-auto min-w-full min-h-full max-w-none max-h-44 transform -translate-y-1/2 -translate-x-1/2",
+                    }}
                   />
 
                   <div className="group absolute top-0 bottom-0 w-full flex items-center justify-center p-4 bg-transparent transition duration-200 ease-in-out hover:bg-blue-800 hover:bg-opacity-75">

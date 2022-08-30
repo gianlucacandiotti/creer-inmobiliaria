@@ -8,23 +8,19 @@ import {
   formatArea,
   transformCurrencyToSymbol,
 } from "@/utils/string-utils"
+import PreviewCompatibleImage from "@/components/PreviewCompatibleImage"
 
 const PropertyCard = ({ data }) => (
   <Link to={data.slug}>
     <div>
       <div className="relative">
-        <div className="group absolute top-0 bottom-0 w-full flex items-center justify-center p-4 bg-transparent transition duration-200 ease-in-out hover:bg-blue-800 hover:bg-opacity-75">
+        <div className="group absolute top-0 bottom-0 w-full flex items-center justify-center p-4 bg-transparent transition duration-200 z-10 ease-in-out hover:bg-blue-800 hover:bg-opacity-75">
           <span className="text-lg text-transparent text-center transition duration-200 ease-in-out group-hover:text-white">
             {data.title}
           </span>
         </div>
 
-        <div>
-          <img
-            src={data.images[0].image}
-            className="object-cover h-60 w-full"
-          />
-        </div>
+        <PreviewCompatibleImage imageInfo={data.images[0].image} />
       </div>
 
       <div className="mt-4">
