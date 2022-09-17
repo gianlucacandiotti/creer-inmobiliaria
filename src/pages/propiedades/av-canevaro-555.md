@@ -56,4 +56,9 @@ contruction_parameter: "7"
 images:
   - image: /img/img-20220307-wa0042.jpg
   - image: /img/img-20220307-wa0014.jpg
+  - image: /img/img-20220307-wa0016.jpg
+  - image: /img/img-20220307-wa0045.jpg
+  - image: /img/img-20220307-wa0028.jpg
+  - image: /img/img-20220307-wa0009.jpg
+  - image: /img/img-20220307-wa0036.jpg
 ---
