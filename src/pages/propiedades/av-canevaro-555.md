@@ -53,4 +53,7 @@ condition: Bueno
 floor_number: 3
 commercial_license: Si
 contruction_parameter: "7"
+images:
+  - image: /img/img-20220307-wa0042.jpg
+  - image: /img/img-20220307-wa0014.jpg
 ---
