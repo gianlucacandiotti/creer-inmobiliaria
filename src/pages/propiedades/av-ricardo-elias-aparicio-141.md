@@ -34,4 +34,8 @@ floor_number: 4
 commercial_license: Si
 commercial_industry: Si
 zoning: CZ
+images:
+  - image: /img/3c9d6832-8057-41b7-b283-daa81012564c.jpeg
+  - image: /img/31f08f05-1206-4843-9f6c-342ac3b53806.jpeg
+  - image: /img/eaf25d8a-1a54-4a33-ad56-4cca1b13b5a4.jpeg
 ---
