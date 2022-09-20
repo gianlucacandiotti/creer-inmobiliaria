@@ -61,4 +61,9 @@ images:
   - image: /img/img-20220307-wa0028.jpg
   - image: /img/img-20220307-wa0009.jpg
   - image: /img/img-20220307-wa0036.jpg
+  - image: /img/img-20220307-wa0017.jpg
+  - image: /img/img-20220307-wa0025.jpg
+  - image: /img/img-20220307-wa0026.jpg
+  - image: /img/img-20220307-wa0048.jpg
+  - image: /img/img-20220307-wa0033.jpg
 ---
