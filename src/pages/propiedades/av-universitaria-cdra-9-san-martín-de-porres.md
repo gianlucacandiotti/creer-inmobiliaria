@@ -49,4 +49,6 @@ floor_number: 5
 commercial_license: Si
 commercial_industry: Si
 contruction_parameter: 7 pisos
+images:
+  - image: /img/img-20220405-wa0035.jpg
 ---
