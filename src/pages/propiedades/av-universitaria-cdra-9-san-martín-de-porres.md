@@ -51,4 +51,9 @@ commercial_industry: Si
 contruction_parameter: 7 pisos
 images:
   - image: /img/img-20220405-wa0035.jpg
+  - image: /img/img-20220405-wa0039.jpg
+  - image: /img/img-20220321-wa0008.jpg
+  - image: /img/img-20220321-wa0016.jpg
+  - image: /img/img-20220321-wa0010.jpg
+  - image: /img/img-20220321-wa0022.jpg
 ---
