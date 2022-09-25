@@ -37,4 +37,7 @@ built_area: 332
 construction_year: 1982
 condition: Bueno
 floor_number: 3
+contruction_parameter: ""
+images:
+  - image: /img/img-20220421-wa0024.jpg
 ---
