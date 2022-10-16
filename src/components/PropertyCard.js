@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import Img from "gatsby-image"
 
 import { Property } from "@/models/Property"
 import {
@@ -8,7 +9,6 @@ import {
   formatArea,
   transformCurrencyToSymbol,
 } from "@/utils/string-utils"
-import PreviewCompatibleImage from "@/components/PreviewCompatibleImage"
 
 const PropertyCard = ({ data }) => (
   <Link to={data.slug}>
@@ -20,7 +20,13 @@ const PropertyCard = ({ data }) => (
           </span>
         </div>
 
-        <PreviewCompatibleImage imageInfo={data.images[0].image} />
+        <Img
+          fluid={data.images[0].image.childImageSharp.fluid}
+          objectFit="cover"
+          objectPosition="50% 50%"
+          alt={data.title}
+          className="max-h-64"
+        />
       </div>
 
       <div className="mt-4">
