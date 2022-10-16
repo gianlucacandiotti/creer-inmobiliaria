@@ -42,7 +42,7 @@ const MenuItemWithSubMenu = ({ title, to, subMenuItems }) => {
         <NavLink>Contacto</NavLink>
       </div>
 
-      <Overlay className="hidden sm:block">
+      <Overlay className="hidden sm:block z-20">
         <NavLink to={to}>{title}</NavLink>
 
         <Overlay.Content>
