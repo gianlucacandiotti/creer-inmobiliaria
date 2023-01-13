@@ -24,7 +24,7 @@ location_district: La Molina
 location_city: Lima
 location_map: '{"type":"Point","coordinates":[-1156.9279371,-12.0816987]}'
 currency: usd
-price: 93000
+price: 67500
 room_count: 3
 total_area: 60
 built_area: 60
